@@ -12,7 +12,7 @@ def Format(input_s):
 
 
 
-print("SIMPLE LIST FORMATTER\nPress s for settings\n(press q to quit)")
+print("== SIMPLE LIST FORMATTER ==\nPress s for settings\nPress q to quit")
 
 while (qv != "q"):
     
@@ -21,13 +21,13 @@ while (qv != "q"):
     if user_i == "s":
         while True:
             print("====== Settings ======")
-            print(f"press w to change Wrapper\npress se for new Seperator{var_1}Value{var_1}\n")
+            print(f"press w to change Wrapper\npress se for new Seperator\n")
             print(f"# Wrapper: {var_1}Value{var_1}")
             print(f"# Seperator: Value{var_2}|(line to ID spacebar)")
 
             settings_i = input("Enter (press b to return): ")
 
-            if settings_i == "({var_1}w{var_1})":
+            if settings_i == "w":
                     var_1 = input("Enter New Wrapper: ")
             elif settings_i == "se":
                     var_2 = input("Enter New Seperator: ")
@@ -35,12 +35,12 @@ while (qv != "q"):
                 break
             else:
                 print("Not an Option")
-                
+
     
     if user_i == "q":
         break
     else:
         print("\n============\n")
         print(Format(user_i))
-        # print("\n")
+    
     
