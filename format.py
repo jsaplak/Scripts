@@ -19,14 +19,23 @@ while (qv != "q"):
     user_i = input("Enter Values: ")
     
     if user_i == "s":
-        print("============")
-        print(f"press w to change Wrapper\npress se for new Seperator{var_1}Value{var_1}\n")
-        print(f"# Wrapper: {var_1}Value{var_1}")
-        print(f"# Seperator: Value{var_2}|(line to ID spacebar)")
-    if user_i == "({var_1}w{var_1})":
-            var_1 = input("Enter New Wrapper: ")
-    if user_i == "({var_1}se{var_1})":
-            var_2 = input("Enter New Seperator: ")
+        while True:
+            print("====== Settings ======")
+            print(f"press w to change Wrapper\npress se for new Seperator{var_1}Value{var_1}\n")
+            print(f"# Wrapper: {var_1}Value{var_1}")
+            print(f"# Seperator: Value{var_2}|(line to ID spacebar)")
+
+            settings_i = input("Enter (press b to return): ")
+
+            if settings_i == "({var_1}w{var_1})":
+                    var_1 = input("Enter New Wrapper: ")
+            elif settings_i == "se":
+                    var_2 = input("Enter New Seperator: ")
+            elif settings_i == "b":
+                break
+            else:
+                print("Not an Option")
+                
     
     if user_i == "q":
         break
